@@ -47,18 +47,85 @@
     <header></header>
     <main>
       <!-- Home -->
-      <section class="flex flex-col min-h-screen justify-center items-center">
+      <section id="home" class=" flex flex-col min-h-screen justify-center items-center">
         <div class="flex flex-col justify-center items-center gap-y-3">
-          <h1 class="text-9xl text-white">ALPHABET CLASH</h1>
+          <h1 class="text-8xl text-white">ALPHABET CLASH</h1>
           <p class="text-white">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button class="btn btn-active bg-white">Play Now</button>
+          <button onclick="playNow()" class="btn btn-active bg-white">Play Now</button>
+        </div>
+      </section> 
+
+    
+      <section id="playGround" class=" hidden">
+          <!-- screen -->
+      <div class="artboard artboard-horizontal lg:phone-6 border-spacing-3 lg:border-[20px] border-[#000000CC] bg-[#FFFFFFB3]" >
+        <h1 id="showAphtbet" class="text-7xl text-white flex justify-center items-center h-full uppercase">Y</h1>
+      </div>
+      <!-- play Ground   -->
+        <!-- keyboard start -->
+        <div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="q" class="kbd">q</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="e" class="kbd">e</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div> 
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div> 
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+            <kbd id="/" class="kbd">/</kbd>
+          </div>
+        </div>
+        <!-- keyboard end -->
+
+        <!-- life and score -->
+        <div class="flex justify-between ">
+          <button class="flex rounded-full items-center text-white bg-red-400 px-4 gap-x-2">
+            Life 
+            <img src="./icons/Group 23.svg" alt="">
+             <span id="life">3</span>
+            </button>
+          <button class="flex justify-between items-center gap-x-2 bg-red-400 rounded-full text-white px-4">Score: <i class="fa-solid fa-coins"></i> <span id="score">0</span></button>
         </div>
       </section>
-      <section></section>
-      <section></section>
+      <!-- Score part -->
+      <section id="lastPart" class="flex justify-center items-center min-h-screen hidden">
+        <div class="text-white text-center gap-y-4">
+          <h1>
+            <span class="text-4xl text-white font-extrabold">Score:</span>
+            <span class="text-3xl text-[#ffffff]">14</span>
+          </h1>
+          <button class="btn">Play Again</button>
+          <p>Practice will make you Pro</p>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="./js/utility.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
