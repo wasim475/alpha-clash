@@ -41,3 +41,13 @@ function getARandomAlphabet(){
 
     return uniqueAlphabet;
 }
+
+function gameOver(){
+    hideElementById('playGround')
+    showElementById('lastPart')
+    let currentAl = document.getElementById('showAphtbet').innerText;
+    romoveBgColor(currentAl)
+    setValue('finalScore',0)
+    
+}
+

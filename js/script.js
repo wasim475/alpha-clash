@@ -19,6 +19,7 @@ function continueGame(){
     setColor(alphabet)
 }
 
+let updateGlobalValue =0;
 function keyboardPress(e){
     let playerPressed = e.key.toLowerCase()
     let currentAlphabet = document.getElementById('showAphtbet').innerText.toLowerCase()
@@ -29,6 +30,7 @@ function keyboardPress(e){
         let score = getTextValue('score')
         let updateScore = score+1;
         setValue('score',updateScore)
+        updateGlobalValue = updateScore
 
         // .....................................................
         // let score = document.getElementById('score')
@@ -37,14 +39,24 @@ function keyboardPress(e){
         // .....................................................
     }else{
         let life = document.getElementById('life')
-        let currentLife = parseInt(life.innerText);
-        if(currentLife>1){
-
-            life.innerText = currentLife-1;
+        let currentLife = parseInt(life.innerText)-1;
+        if(currentLife>0){
+            setValue('life',currentLife)
+            
         }else{
-            hideElementById('playGround')
-            showElementById('lastPart')
+            gameOver()
+            setValue('finalScore', updateGlobalValue)
         }
     }
 }
 document.addEventListener('keyup',keyboardPress)
+
+function playAgain(){
+    continueGame()
+    showElementById('playGround')
+    hideElementById('lastPart')
+    setValue('life',3)
+    setValue('score',0)
+   
+   
+}
